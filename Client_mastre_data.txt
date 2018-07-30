@@ -1,0 +1,2 @@
+Cif_nr,first_name,last_name,address,dob,first_acc_opening_dt,last_acc_closing_dt,branch_cd,zip_cd,state,country,rm_pid
+1,'deep','kumar','ranchi','01.Jan.2000','02.Feb.2015','01.Jan.0001','001',450266,'bihar','india','A123451'
