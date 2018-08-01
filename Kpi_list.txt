@@ -1,2 +1,0 @@
-kri_id,kri_cd,kri_name
-1,'k001','KYC'
