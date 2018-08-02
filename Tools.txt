@@ -1,0 +1,32 @@
+--- Gui Tools and Resource, All resources to be created as IaC(Infrastructure as Code) --
+1. Window VM for App server / docker / container
+2. IIS 8/?
+3. URL / Network setup
+4. Windows/Linux VM ( or we can use same App server ) for Build Server
+5. Jenkins to be installed on build server
+6. MSBuild plugins to be configured
+7. docker / containers to host the micro services component.
+8. SQL Server / SSRS / SSAS
+------------------------------------------ 
+---------------- POWER BI ----------------
+
+ 1. New Windows VM for Power BI.
+ 2. Power BI version to be checked and to be compatible with PowerBI Desktop.
+
+------------------------------------------
+----------------- Bigdata ----------------
+ 1. VM (new or existing from above)
+ 2. Python x to be installed
+ 3. SPARK ?
+
+------------------------------------------
+
+---------------- Azure ML Predictive Analytics ---------
+ 1. Azure ML Studio (online)
+ 2. VM ( New or existing ) to host the WebApi service
+ 3. GitHub to have the binaries and analytics modules and source (CSV / SQL serve) 
+
+
+
+
+
