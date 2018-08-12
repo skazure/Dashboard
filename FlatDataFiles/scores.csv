@@ -1,0 +1,2 @@
+kri_cd,regex
+'k001','case when NUMBER_$ = 0 THEN 'GREEN' WHEN NUMBER_$ >= 1 THEN 'RED' END'
