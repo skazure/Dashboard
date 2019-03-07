@@ -1,4 +1,5 @@
 import { Directive, ElementRef, Output, EventEmitter, OnInit } from '@angular/core';
+import * as $ from "jquery";
  
 @Directive({
   selector: '[appDatepicker]'
@@ -9,11 +10,11 @@ export class DatepickerDirective implements OnInit {
   constructor(private elementRef: ElementRef) { }
  
   public ngOnInit() {
-    ($(this.elementRef.nativeElement) as any).datepicker({
+    (<any>$('.datepicker') ).datepicker({
       dateFormat: 'mm/dd/yy',
       changeYear: true,
       yearRange: "-100:+0",
-      onSelect: (dateText) => {
+      onSelect: (dateText: {}) => {
         this.change.emit(dateText);
       }
     });
