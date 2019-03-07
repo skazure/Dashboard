@@ -12,6 +12,11 @@ import { UiModule } from './ui/ui.module';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { RepositoryService } from './shared/services/repository.service';
+import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
+import * as bootstrap from "bootstrap";
+import * as $ from "jquery";
+import { ErrorHandlerService } from './shared/services/error-handler.service';
 
 
 @NgModule({
@@ -19,7 +24,8 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
     AppComponent,    
     HomeComponent,
     MenuComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    InternalServerComponent
   ],
   imports: [
     BrowserModule,
@@ -30,11 +36,12 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
       { path: 'home', component: HomeComponent },
       { path: 'owner', loadChildren: "./owner/owner.module#OwnerModule" },
       { path: '404', component : NotFoundComponent},
+      { path: '500', component: InternalServerComponent },
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '**', redirectTo: '/404', pathMatch: 'full'}      
      ])    
   ],
-  providers: [EnvironmentUrlService],
+  providers: [EnvironmentUrlService, RepositoryService, ErrorHandlerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
